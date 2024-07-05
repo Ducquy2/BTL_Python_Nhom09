@@ -20,7 +20,7 @@ class quanlydiemHeDH:
 
         self.cursor.execute("""
             CREATE TABLE ql_Diem (
-                MaSV TEXT,
+                 MaSV TEXT,
                 MonHoc TEXT,
                 DiemLan1 REAL,
                 DiemLan2 REAL,
@@ -39,7 +39,7 @@ class quanlydiemHeDH:
             CREATE TABLE ql_Lop (
                 MaLop TEXT PRIMARY KEY,
                 SoPhong INTEGER,
-                TenMonHoc TEXT,
+                TenMH TEXT,
                 TenGiangVien TEXT
             )
         """)
@@ -63,6 +63,7 @@ class quanlydiemHeDH:
                 LoaiTaiKhoan TEXT CHECK(LoaiTaiKhoan IN ('Admin', 'SinhVien'))
             )
         """)
+
 
         self.conn.commit()
 
@@ -137,6 +138,6 @@ class quanlydiemHeDH:
         self.conn.commit()
 
 
-db = quanlydiemHeDH('ql_diemHeDH.db')
+db = quanlydiemHeDH('ql_DiemHeDH.db')
 db.create_tables()
 db.insert_data()
