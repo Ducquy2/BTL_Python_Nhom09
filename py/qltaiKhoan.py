@@ -10,7 +10,7 @@ from tkinter import messagebox
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import QTableWidgetItem
 
-from BTL_Nhom09 import Login
+from BTL_Nhom09.py import Login
 
 
 class Ui_QuanLyTaiKhoanSinhVien(object):
@@ -45,19 +45,12 @@ class Ui_QuanLyTaiKhoanSinhVien(object):
         font.setPointSize(13)
         self.btnTim.setFont(font)
         self.btnTim.setObjectName("btnTim")
-        self.btnLoginForm = QtWidgets.QPushButton(parent=QuanLyTaiKhoanSinhVien)
-        self.btnLoginForm.setGeometry(QtCore.QRect(350, 370, 81, 41))
-        self.btnLoginForm.setObjectName("btnLoginForm")
-        self.btnThoat = QtWidgets.QPushButton(parent=QuanLyTaiKhoanSinhVien)
-        self.btnThoat.setGeometry(QtCore.QRect(450, 370, 81, 41))
-        self.btnThoat.setObjectName("btnThoat")
 
         self.retranslateUi(QuanLyTaiKhoanSinhVien)
         QtCore.QMetaObject.connectSlotsByName(QuanLyTaiKhoanSinhVien)
 
         self.load_data()
         self.btnTim.clicked.connect(self.tim_kiem)
-        self.btnThoat.clicked.connect(self.Thoat)
 
     def retranslateUi(self, QuanLyTaiKhoanSinhVien):
         _translate = QtCore.QCoreApplication.translate
@@ -70,10 +63,8 @@ class Ui_QuanLyTaiKhoanSinhVien(object):
         item.setText(_translate("QuanLyTaiKhoanSinhVien", "User"))
         item = self.tblTaiKhoanSV.horizontalHeaderItem(3)
         item.setText(_translate("QuanLyTaiKhoanSinhVien", "Password"))
-        self.label_2.setText(_translate("QuanLyTaiKhoanSinhVien", "Quản lý tài khoản SinhVien"))
+        self.label_2.setText(_translate("QuanLyTaiKhoanSinhVien", "Quản lý tài khoản Sinh Viên"))
         self.btnTim.setText(_translate("QuanLyTaiKhoanSinhVien", "Tìm kiếm"))
-        self.btnLoginForm.setText(_translate("QuanLyTaiKhoanSinhVien", "Đăng nhập"))
-        self.btnThoat.setText(_translate("QuanLyTaiKhoanSinhVien", "Thoát"))
 
     def load_data(self):
         conn = sqlite3.connect('ql_diemHeDH.db')
@@ -94,7 +85,7 @@ class Ui_QuanLyTaiKhoanSinhVien(object):
                 self.tblTaiKhoanSV.setItem(i, j, QTableWidgetItem(str(value)))
 
     def tim_kiem(self):
-        search_term = self.txtTim.text()
+        search_SV = self.txtTim.text()
 
         conn = sqlite3.connect('ql_diemHeDH.db')
         cursor = conn.cursor()
@@ -103,7 +94,7 @@ class Ui_QuanLyTaiKhoanSinhVien(object):
                     FROM ql_HoSoSV
                     JOIN ql_TaiKhoan ON ql_HoSoSV.MaSV = ql_TaiKhoan.User
                     WHERE ql_HoSoSV.MaSV LIKE ? OR ql_HoSoSV.TenSV LIKE ? OR ql_TaiKhoan.User LIKE ? OR ql_TaiKhoan.Password LIKE ?
-                """, (f'%{search_term}%', f'%{search_term}%', f'%{search_term}%', f'%{search_term}%'))
+                """, (f'%{search_SV}%', f'%{search_SV}%', f'%{search_SV}%', f'%{search_SV}%'))
         data = cursor.fetchall()
 
         if data:
@@ -115,16 +106,7 @@ class Ui_QuanLyTaiKhoanSinhVien(object):
                 for j, value in enumerate(row):
                     self.tblTaiKhoanSV.setItem(i, j, QTableWidgetItem(str(value)))
         else:
-            messagebox.showinfo(self,"Thông báo","Không tìm thấy sinh viên")
-
-
-    def Thoat(self):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Login.Ui_Login_Dialog()
-        self.ui.setupUi(self.window)
-        Ui_QuanLyTaiKhoanSinhVien.hide()
-        self.window.show()
-
+            messagebox.showinfo('Thông báo','Không tìm thấy sinh viên')
 
 
 if __name__ == "__main__":

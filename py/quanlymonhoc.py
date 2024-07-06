@@ -158,6 +158,8 @@ class Ui_Quanlymonhoc(object):
         self.txtHocKy.clear()
         self.txtPhongHoc.clear()
 
+        self.load_data()
+
 
     def tim_kiem(self):
         maMH = self.txtMamh.text()

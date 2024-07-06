@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>831</width>
+    <width>907</width>
     <height>625</height>
    </rect>
   </property>
@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>90</y>
-      <width>121</width>
-      <height>51</height>
+      <y>80</y>
+      <width>151</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
@@ -37,7 +37,7 @@
      <rect>
       <x>170</x>
       <y>10</y>
-      <width>551</width>
+      <width>731</width>
       <height>61</height>
      </rect>
     </property>
@@ -55,8 +55,8 @@
      <rect>
       <x>10</x>
       <y>160</y>
-      <width>121</width>
-      <height>51</height>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -74,8 +74,8 @@ môn học</string>
      <rect>
       <x>10</x>
       <y>230</y>
-      <width>121</width>
-      <height>51</height>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -93,8 +93,8 @@ sinh viên  </string>
      <rect>
       <x>10</x>
       <y>300</y>
-      <width>121</width>
-      <height>51</height>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -112,8 +112,8 @@ lớp học</string>
      <rect>
       <x>10</x>
       <y>370</y>
-      <width>121</width>
-      <height>51</height>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -130,8 +130,8 @@ lớp học</string>
      <rect>
       <x>10</x>
       <y>440</y>
-      <width>121</width>
-      <height>51</height>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -146,8 +146,8 @@ lớp học</string>
    <widget class="QTableWidget" name="tblThanhVienNhom">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>90</y>
+      <x>240</x>
+      <y>80</y>
       <width>581</width>
       <height>421</height>
      </rect>
@@ -184,47 +184,101 @@ lớp học</string>
     </column>
     <item row="0" column="0">
      <property name="text">
-      <string/>
+      <string>20211284</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
     </item>
     <item row="0" column="1">
      <property name="text">
       <string>Nguyễn Đức Quý</string>
      </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
     </item>
     <item row="0" column="2">
      <property name="text">
       <string>DCCNTT12.10.5</string>
      </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
     </item>
     <item row="1" column="0">
      <property name="text">
-      <string/>
+      <string>20211270</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
     </item>
     <item row="1" column="1">
      <property name="text">
       <string>Phạm Thị Phương Anh</string>
      </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
     </item>
     <item row="1" column="2">
      <property name="text">
       <string>DCCNTT12.10.5</string>
      </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
     </item>
     <item row="2" column="0">
      <property name="text">
-      <string/>
+      <string>20211261</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
     </item>
     <item row="2" column="1">
      <property name="text">
       <string>Tạ Duy Khánh</string>
      </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
     </item>
     <item row="2" column="2">
      <property name="text">
       <string>DCCNTT12.10.5</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
     </item>
    </widget>
@@ -234,8 +288,8 @@ lớp học</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>831</width>
-     <height>21</height>
+     <width>907</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

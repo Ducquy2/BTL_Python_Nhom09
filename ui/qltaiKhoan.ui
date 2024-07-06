@@ -16,9 +16,9 @@
   <widget class="QTableWidget" name="tblTaiKhoanSV">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>40</x>
      <y>150</y>
-     <width>441</width>
+     <width>511</width>
      <height>192</height>
     </rect>
    </property>
@@ -56,9 +56,9 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>20</y>
-     <width>271</width>
+     <x>130</x>
+     <y>30</y>
+     <width>361</width>
      <height>31</height>
     </rect>
    </property>
@@ -68,7 +68,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Quản lý tài khoản SinhVien</string>
+    <string>Quản lý tài khoản Sinh Viên</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btnTim">
@@ -87,32 +87,6 @@
    </property>
    <property name="text">
     <string>Tìm kiếm</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnLoginForm">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>370</y>
-     <width>81</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Đăng nhập</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnThoat">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>370</y>
-     <width>81</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Thoát</string>
    </property>
   </widget>
  </widget>
